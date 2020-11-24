@@ -1,0 +1,40 @@
+<div class="block" *ngIf="isShown">
+  <span class="header">
+    <h6>Contact {{ speaker }}</h6> 
+    <ion-icon (click)="reset()" name="close-outline"></ion-icon>
+  </span>
+  <form [formGroup]="formGroup">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Name</ion-label>
+        <ion-input
+          formControlName="nameCtrl"
+          required="true"
+          placeholder="Your name">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input
+          formControlName="emailCtrl"
+          required="true"
+          placeholder="Your email">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Message</ion-label>
+        <ion-textarea 
+          rows="5" 
+          cols="5" 
+          formControlName="msgCtrl"
+          placeholder="Your message">
+        </ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-button [disabled]="!formGroup.valid" type="submit">
+          <ion-icon name="checkmark"></ion-icon> Send
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </form>
+</div>

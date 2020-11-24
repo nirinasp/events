@@ -1,0 +1,8 @@
+{
+  "name": "Evo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "app_id": ""
+}

@@ -1,0 +1,16 @@
+.block {
+    background-color: whitesmoke;
+    border-radius: 16px 16px 0px 0px;
+    padding: 25px;
+}
+
+.header {
+    display: flex; 
+    justify-content: space-between;
+
+    ion-icon {
+        align-items: right; 
+        width: 25px; 
+        height: 25px;
+    }
+}

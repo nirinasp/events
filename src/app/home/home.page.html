@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-card [routerLink]="['/events']">
+      <img src="../../assets/img/event.jpg">
+      <ion-card-header>
+        <ion-card-title>EVENTS</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        View all events
+      </ion-card-content>
+    </ion-card>
+    <ion-card [routerLink]="['/speakers']">
+      <img src="../../assets/img/speaker.jpg">
+      <ion-card-header>
+        <ion-card-title>SPEAKERS</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        View all speakers
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

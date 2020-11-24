@@ -1,0 +1,24 @@
+.main {
+    display: flex;
+    margin: 8px;
+    height: 75px;
+    background-color:lightsteelblue;
+
+    img {
+        width: 75px;
+        height: 75px;
+        object-fit: cover;
+    }
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    color: white;
+}
+
+.speaker-title {
+    display: flex; 
+    align-items: center;
+}

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Event Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="event">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ event.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ event.location.location }} <br>
+      {{ event.location.contact }} <br>
+      From {{ event.from | date :'short' }} <br>
+      To {{ event.to | date :'short' }} <br><br>
+
+      <span class="speaker-title">
+        <ion-icon name="mic-outline"></ion-icon>
+        <h3 *ngIf="event.speakers.length > 1">OUR SPEAKERS</h3>
+        <h3 *ngIf="event.speakers.length === 1">OUR SPEAKER</h3>
+      </span>
+      <custom-card [data]="event.speakers"></custom-card>
+    </ion-card-content>
+  </ion-card>
+  <div style="height: 500px; width: 500px" id="map1"></div>
+</ion-content>

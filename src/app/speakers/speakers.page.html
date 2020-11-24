@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Speakers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="refreshSpeakers($event)">
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing">
+    </ion-refresher-content>
+  </ion-refresher>
+  <custom-card [data]="speakerList" (contact)="openContactForm($event)"></custom-card>
+</ion-content>
+
+<contact-form 
+  [isShown]="contactState" 
+  [speaker]="contactName" 
+  (changeValue)="updateValue($event)"
+></contact-form>
